@@ -38,6 +38,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'mocha'
+  gem 'pry'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
