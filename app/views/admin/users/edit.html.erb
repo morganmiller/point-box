@@ -1,0 +1,8 @@
+<h1>Add points for <%= @user.username %></h1>
+
+<%= form_for([:admin, @user]) do |f| %>
+  <%= f.label :points %>
+  <%= f.text_field :points %> <br>
+  
+  <%= f.submit "Add Points" %>
+<% end %>
