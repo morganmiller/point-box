@@ -8,6 +8,6 @@ class UserPointsTest < ActionDispatch::IntegrationTest
 
     ApplicationController.any_instance.stubs(:current_user).returns(user)
     visit user_path(user)
-    assert page.has_content?("Points: 15")
+    assert page.has_content?("You currently have 15 points.")
   end
 end
