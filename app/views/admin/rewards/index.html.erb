@@ -4,5 +4,6 @@
   <li>
     <%= reward.name %>: <%= reward.description %>, cost: <%= reward.cost %>
     <%= link_to "Edit", edit_admin_reward_path(reward) %>
+    <%= link_to "Delete", admin_reward_path(reward), method: :delete %>
   </li>
 <% end %>
