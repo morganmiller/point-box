@@ -1,3 +1,5 @@
+<h1>Edit Reward <%= @reward.name %></h1>
+
 <%= form_for([:admin, @reward]) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %> <br>
@@ -8,5 +10,5 @@
   <%= f.label :cost %>
   <%= f.text_field :cost %> <br>
 
-  <%= f.submit %>
+  <%= f.submit "Edit Reward" %>
 <% end %>
