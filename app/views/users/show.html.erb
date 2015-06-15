@@ -1,3 +1,9 @@
-Welcome, <%= @user.username %>!
+<h1>Welcome, <%= @user.username %>!</h1>
 You currently have <%= @user.points %> points.
+
+<h3><%= @user.username %>'s rewards</h3>
+<% @user.rewards.each do |reward| %>
+  <li><%= reward.name %>: <%= reward.description %></li>
+<% end %>
+  
 <%= link_to "logout", logout_path, method: :delete %>

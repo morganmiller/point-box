@@ -3,5 +3,6 @@
 <% @rewards.each do |reward| %>
   <li>
     <%= reward.name %>: <%= reward.description %>, cost: <%= reward.cost %>
+    <%= link_to "Buy", reward_user_rewards_path(reward), method: :post %>
   </li>
 <% end %>

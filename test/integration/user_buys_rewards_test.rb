@@ -1,10 +1,11 @@
 require 'test_helper'
 
-class UserSeesRewardsTest < ActionDispatch::IntegrationTest
+class UserBuysRewardsTest < ActionDispatch::IntegrationTest
 
-  test "user can see available rewards" do
+  test "user can buy a reward" do
     user = User.create(username: "morgan",
-                       password: "password")
+                       password: "password",
+                       points: 50)
 
     ApplicationController.any_instance.stubs(:current_user).returns(user)
 
@@ -15,9 +16,10 @@ class UserSeesRewardsTest < ActionDispatch::IntegrationTest
                   description: "A silver star for you",
                   cost: 15)
     visit rewards_path
-
+    click_link "Buy", match: :first
+    
+    assert page.has_content?("#{user.username}'s rewards")
     assert page.has_content?("Gold Star")
-    assert page.has_content?("Silver Star")
   end
-  
+
 end
