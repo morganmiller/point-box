@@ -1,0 +1,12 @@
+<%= form_for([:admin, @reward]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :description %>
+  <%= f.password_field :description %> <br>
+
+  <%= f.label :cost %>
+  <%= f.password_field :cost %> <br>
+
+  <%= f.submit %>
+<% end %>
