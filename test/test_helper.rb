@@ -15,6 +15,6 @@ class ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   def teardown
-    reset_session!
+    Capybara.reset_session!
   end
 end

@@ -36,7 +36,6 @@ class Admin::RewardsController < Admin::BaseController
   
   def destroy
     @reward = Reward.find(params[:id])
-    binding.pry
     @reward.destroy
     redirect_to admin_rewards_path
   end

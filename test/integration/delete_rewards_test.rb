@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DeleteRewardsTest < ActionDispatch::IntegrationTest
 
-  test "admin can edit existing reward" do
+  test "admin can delete existing reward" do
     admin = User.create(username: "morgan",
       password: "admin",
       role: 1)
